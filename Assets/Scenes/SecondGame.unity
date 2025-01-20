@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1340148786, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2167,7 +2167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  m_Color: {r: 0, g: 0.21698111, b: 0.023040337, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2462,6 +2462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4236bbf12094de4cb3aed63b9828b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _prefabCard: {fileID: 6162731576668125188, guid: 94e14a68d895cd245ae34c858b0f5e8e, type: 3}
   _maxCountRows: 4
   _cardObject: {fileID: 3076186122092000391, guid: 94e14a68d895cd245ae34c858b0f5e8e, type: 3}
   _cardsParent: {fileID: 660318772}
@@ -2477,7 +2478,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e941e67aac887d74d9446a3329921f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _card: {fileID: 0}
+  Spades:
+  - {fileID: -1794224175, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1642951554, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1567664518, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -2142720919, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 160573322, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 2046349797, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1127046017, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 2004484135, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1850553458, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -122608510, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -268648744, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 852987765, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1743433007, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  Diamonds:
+  - {fileID: -1587439458, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1637184321, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 789977502, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1096827826, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 688578623, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1930457057, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1754763370, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1146764349, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1960852910, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -976919669, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -622492314, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 241682863, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1277975773, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  Hearts:
+  - {fileID: 1676616010, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1192317413, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1940077029, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1531131778, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -340060136, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1283940518, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -777177384, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1123203111, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1936936976, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1206369541, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1938894600, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1010820516, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1716396266, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  Clubs:
+  - {fileID: -934607156, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 95814211, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1599091513, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1611218410, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1629017009, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1765425063, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 166022724, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 61639323, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -515597846, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1146726865, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 1965191885, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: -1590419728, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
+  - {fileID: 457615124, guid: 5ff67efc900ce5047855b31536a31900, type: 3}
 --- !u!1 &1560483631
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,8 +3182,8 @@ Camera:
   m_GameObject: {fileID: 2059970458}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.08755517, g: 0.5188679, b: 0.07587219, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

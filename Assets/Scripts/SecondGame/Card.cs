@@ -1,14 +1,16 @@
-namespace SecondGame
-{
-    public class Card
-    {
-        public int Value { get; private set; } 
-        public Suit CardSuit { get; private set; }
+using UnityEngine;
 
-        public Card(int value, Suit suit)
-        {
-            Value = value;
-            CardSuit = suit;
-        }
+public class Card : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
