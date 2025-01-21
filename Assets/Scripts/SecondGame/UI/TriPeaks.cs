@@ -28,6 +28,7 @@ namespace SecondGame
         private void DealCards()
         {
             _deck = new TechDeck();
+            GameCard[] cards = new GameCard[];
 
             float sizeCardX = _cardObject.transform.localScale.x;
             float sizeCardY = _cardObject.transform.localScale.y;
@@ -49,8 +50,33 @@ namespace SecondGame
                         Image spawnedCard = Instantiate(_prefabCard, new Vector2(positionCardX, positionCardY), Quaternion.identity, _cardsParent.transform);
                         GameCard gameCard = spawnedCard.AddComponent<GameCard>();
 
-                        int numberCard = row == 0 ? col : row == 1 ? 2 + col + 1 : row == 2 ? 8 + col + 1 : 17 + col + 1;
-                        //gameCard.Init(_deck.SpriteCards[numberCard], _prefabCard, _prefabCard, _deck.Cards[numberCard].Value);
+                        if (col < row + 2 || row == _maxCountRows - 2)
+                        {
+                            GameCard
+                        }
+                        else if (col < row * 2 + 2)
+                        {
+
+                        }
+                        else if (col < row * 3 + 3)
+                        {
+
+                        }
+                        else
+                        {
+
+                        }
+
+                        int numberCard = 0;
+                        for (int i = 0; i < row + 1; i++)
+                        {
+                            if (i == row)
+                                numberCard += col + 1;
+
+                            numberCard += (row + 1) * 3;
+                        }
+
+                        gameCard.Init(_deck.SpriteCards[numberCard], _prefabCard, _prefabCard, _deck.Cards[numberCard].Value);
                     }
                 }
             }

@@ -4,15 +4,14 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class GameCard : MonoBehaviour, IPointerDownHandler
-{ 
+{
+    [SerializeField]
     private Sprite _spriteCard;
 
     private int _value;
 
-    [SerializeField]
     private GameCard _firstUpCard;
 
-    [SerializeField]
     private GameCard _secondUpCard;
 
     public static event Action ActionButtonPressed;
