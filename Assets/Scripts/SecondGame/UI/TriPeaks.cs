@@ -1,6 +1,8 @@
 using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.GPUSort;
 
 namespace SecondGame
 {
@@ -15,9 +17,6 @@ namespace SecondGame
         private int _maxCountRows;
 
         [SerializeField]
-        private GameObject _cardObject;
-
-        [SerializeField]
         private GameObject _cardsParent;
 
         void Start()
@@ -28,10 +27,10 @@ namespace SecondGame
         private void DealCards()
         {
             _deck = new TechDeck();
-            GameCard[] cards = new GameCard[];
+            List<GameCard> cards = new List<GameCard>();
 
-            float sizeCardX = _cardObject.transform.localScale.x;
-            float sizeCardY = _cardObject.transform.localScale.y;
+            float sizeCardX = _prefabCard.transform.localScale.x;
+            float sizeCardY = _prefabCard.transform.localScale.y;
 
             for (int row = 0; row < _maxCountRows; row++)
             {
@@ -49,37 +48,72 @@ namespace SecondGame
                     {
                         Image spawnedCard = Instantiate(_prefabCard, new Vector2(positionCardX, positionCardY), Quaternion.identity, _cardsParent.transform);
                         GameCard gameCard = spawnedCard.AddComponent<GameCard>();
+                        cards.Add(gameCard);
 
-                        if (col < row + 2 || row == _maxCountRows - 2)
-                        {
-                            GameCard
-                        }
-                        else if (col < row * 2 + 2)
-                        {
+                        GameCard[] upCards = AssigningTopCards(3, col, row, cards);
 
-                        }
-                        else if (col < row * 3 + 3)
+                        if (upCards != null)
                         {
+                            if (upCards[0] != null)
+                                upCards[0].InitUpCards(null, gameCard);
 
-                        }
-                        else
-                        {
-
+                            if (upCards[1] != null)
+                                upCards[1].InitUpCards(gameCard, null);
                         }
 
-                        int numberCard = 0;
-                        for (int i = 0; i < row + 1; i++)
-                        {
-                            if (i == row)
-                                numberCard += col + 1;
+                        int numberCard = A(row, col);
 
-                            numberCard += (row + 1) * 3;
-                        }
-
-                        gameCard.Init(_deck.SpriteCards[numberCard], _prefabCard, _prefabCard, _deck.Cards[numberCard].Value);
+                        gameCard.InitCardInfo(_deck.SpriteCards[numberCard], _deck.Cards[A(row, col)].Value);
                     }
                 }
             }
+        }
+
+        public GameCard[] AssigningTopCards(int countTriangles, int col, int row, List<GameCard> cardList)
+        {
+            GameCard[] upCards = new GameCard[2];
+
+            if (row != 0)
+            {
+                for (int i = 1; i <= countTriangles; i++)
+                {
+                    if (col < row * i + i)
+                    { 
+                        if (col - 1 >= row * (i - 1) + (i - 1))
+                        {
+                            upCards[0] = cardList[A(row - 1, col - i)];
+                        }
+
+                        if (col + 1 <= row * i + i - 1)
+                        {
+                            Debug.Log(row - 1);
+                            Debug.Log(col - (i - 1));
+                            Debug.Log(A(row - 1, col - (i - 1)));
+                            upCards[1] = cardList[A(row - 1, col - (i - 1))];
+                        }
+                        return upCards;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public int A(int row, int col)
+        {
+            int numberCard = 0;
+            for (int i = 0; i < row + 1; i++)
+            {
+                if (i == row)
+                {
+                    numberCard += col;
+                    return numberCard;
+                }
+
+                numberCard += (i + 1) * 3;
+            }
+
+            return numberCard;
         }
     }
 }

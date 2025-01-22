@@ -6,7 +6,7 @@ namespace SecondGame
     public class TechDeck
     {
         public List<TechCard> Cards { get; private set; }
-        public Sprite[] SpriteCards {  get; private set; }
+        public List<Sprite> SpriteCards { get; private set; }
 
         public TechDeck()
         {
@@ -33,6 +33,20 @@ namespace SecondGame
             }
 
             SpriteCards = ViewCardsSetrings.instance.ViewCards(Cards);
+        }
+
+        public Sprite SetAndDeleteSprite()
+        {
+            if (SpriteCards.Count > 0)
+            {
+                Sprite sprite = SpriteCards[0];
+
+                SpriteCards.RemoveAt(0);
+                return sprite;
+            }
+
+            Debug.LogError("Sprte.Count == 0!");
+            return null;
         }
     }
 }

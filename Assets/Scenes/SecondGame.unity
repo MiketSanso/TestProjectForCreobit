@@ -2126,6 +2126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1428482905}
+  - component: {fileID: 1428482908}
   - component: {fileID: 1428482907}
   - component: {fileID: 1428482906}
   m_Layer: 5
@@ -2192,6 +2193,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428482904}
   m_CullTransparentMesh: 1
+--- !u!114 &1428482908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428482904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb267dedcb4bf449a59ce70883ee17e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1437195756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2477,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabCard: {fileID: 6162731576668125188, guid: 94e14a68d895cd245ae34c858b0f5e8e, type: 3}
   _maxCountRows: 4
-  _cardObject: {fileID: 3076186122092000391, guid: 94e14a68d895cd245ae34c858b0f5e8e, type: 3}
   _cardsParent: {fileID: 660318772}
 --- !u!114 &1556093928
 MonoBehaviour:

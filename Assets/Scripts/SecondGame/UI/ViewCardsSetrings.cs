@@ -19,17 +19,19 @@ namespace SecondGame
         [SerializeField]
         private Sprite[] Clubs = new Sprite[13];
 
+        private List<Sprite> _cards;
+
         public void Awake()
         {
             if (instance != null)
-                Destroy(this.gameObject);
+                Destroy(gameObject);
 
             instance = this;
         }
 
-        public Sprite[] ViewCards(List<TechCard> cardsInDeck)
+        public List<Sprite> ViewCards(List<TechCard> cardsInDeck)
         {
-            Sprite[] cards = new Sprite[cardsInDeck.Count];
+            _cards = new List<Sprite>();
 
             for (int i = 0; i < cardsInDeck.Count; i++)
             {
@@ -53,9 +55,11 @@ namespace SecondGame
                         return null;
                 }
 
-                cards[i] = spriteForImage;
+                _cards.Add(spriteForImage);
+                _cards[i] = spriteForImage;
             }
-            return cards;
+
+            return _cards;
         }
     }
 }
