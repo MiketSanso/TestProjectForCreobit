@@ -78,18 +78,28 @@ namespace SecondGame
                 for (int i = 1; i <= countTriangles; i++)
                 {
                     if (col < row * i + i)
-                    { 
-                        if (col - 1 >= row * (i - 1) + (i - 1))
-                        {
-                            upCards[0] = cardList[A(row - 1, col - i)];
-                        }
+                    {
+                        //if (col - 1 >= row * (i - 1) + (i - 1))
+                        //{
+                        //  if (row == _maxCountRows - 1)
+                        //  {
+                        //      Debug.Log(A(row - 1, col - 1));
+                        //      upCards[0] = cardList[A(row - 1, col - 1)];
+                        //  }
+                        //  else
+                        //   upCards[0] = cardList[A(row - 1, col - i)];
+                        //}
 
-                        if (col + 1 <= row * i + i - 1)
-                        {
-                            Debug.Log(row - 1);
-                            Debug.Log(col - (i - 1));
-                            Debug.Log(A(row - 1, col - (i - 1)));
-                            upCards[1] = cardList[A(row - 1, col - (i - 1))];
+                        if (row == _maxCountRows - 1 && i < countTriangles || col + 1 <= row * i + i - 1) 
+                        { 
+                            if (row == _maxCountRows - 1)
+                            {
+                                upCards[1] = cardList[A(row - 1, col)];                            
+                            }
+                            else
+                                upCards[1] = cardList[A(row - 1, col - (i - 1))];
+
+                            
                         }
                         return upCards;
                     }
