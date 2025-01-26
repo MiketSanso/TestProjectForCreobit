@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: FirstGame
+  m_EditorClassIdentifier: 
+  m_GroupName: FirstGame
+  m_GUID: 088016a2075eef34ebfb2db35f05527c
+  m_SerializeEntries:
+  - m_GUID: 619cb8e0b651a7142bffce01ab2914a3
+    m_Address: Computer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eaaf27c997d5a1346834fb190be94fd5
+    m_Address: BackgroundForFirstGame
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0c3df3c9eaefaa543b12d0460dbd4002, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 60e8ba73f3d61964c99973d7e88b2884, type: 2}
+    - {fileID: 11400000, guid: 9894554f2f132a04597eb59914e89665, type: 2}

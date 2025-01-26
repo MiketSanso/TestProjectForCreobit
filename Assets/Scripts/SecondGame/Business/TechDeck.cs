@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ namespace SecondGame
             Shuffle();
         }
 
-        public void Shuffle()
+        public async void Shuffle()
         {
             for (int i = 0; i < Cards.Count; i++)
             {
@@ -30,6 +31,16 @@ namespace SecondGame
                 TechCard temp = Cards[i];
                 Cards[i] = Cards[randomIndex];
                 Cards[randomIndex] = temp;
+            }
+
+            await WaitUntilReadyAsync();
+        }
+
+        private async UniTask WaitUntilReadyAsync()
+        {
+            while (!ViewCardsSetrings.instance.isCardsFounded)
+            {
+                await UniTask.Yield();
             }
 
             SpriteCards = ViewCardsSetrings.instance.ViewCards(Cards);
@@ -42,10 +53,11 @@ namespace SecondGame
                 Sprite sprite = SpriteCards[0];
 
                 SpriteCards.RemoveAt(0);
+                Cards.RemoveAt(0);
+
                 return sprite;
             }
 
-            Debug.LogError("Sprte.Count == 0!");
             return null;
         }
     }

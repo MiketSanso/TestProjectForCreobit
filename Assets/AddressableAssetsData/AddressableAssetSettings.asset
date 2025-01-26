@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 28719d840110fe145a3efb2746c29f9c
+  m_DefaultGroup: ea6168ecb95a00e46a5ee2243077eb5f
   m_currentHash:
     serializedVersion: 2
-    Hash: a657d8acc052ac438266c056aad599e1
+    Hash: aa93223629e869f63fbb212f149cf55c
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
   m_InternalIdNamingMode: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_BundleRetryCount: 0
   m_BundleRedirectLimit: -1
   m_SharedBundleSettings: 0
-  m_SharedBundleSettingsCustomGroupIndex: 0
+  m_SharedBundleSettingsCustomGroupIndex: 2
   m_ContiguousBundles: 1
   m_StripUnityVersionFromBundleBuild: 0
   m_DisableVisibleSubAssetRepresentations: 0
@@ -50,16 +50,18 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: 737430f78e0e72748b81c10233f6747b
   m_RemoteCatalogLoadPath:
-    m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
+    m_Id: b78f7f293f8c6a24496b6503c4a81628
+  m_ContentStateBuildPathProfileVariableName: BuildTarget
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
-  m_BuildAddressablesWithPlayerBuild: 0
+  m_BuildAddressablesWithPlayerBuild: 1
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
+  - {fileID: 11400000, guid: c8867d158e1a75740923438a7ed8d0f5, type: 2}
   - {fileID: 11400000, guid: bd44e2345c3ee274eb2bfb8fa7f5201b, type: 2}
+  - {fileID: 11400000, guid: 1ada9d1103e8a71418b558f9d4756f12, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
@@ -70,9 +72,9 @@ MonoBehaviour:
       m_ProfileName: Default
       m_Values:
       - m_Id: 1d7849284808f0c4980d16c81623fd5d
-        m_Value: <undefined>
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 225b618bdec40244ba1b0c98760bc144
-        m_Value: 'ServerData/[BuildTarget]'
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: 6e04aaf4bca39cb40bb6c7e9b5fe428a
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 737430f78e0e72748b81c10233f6747b
